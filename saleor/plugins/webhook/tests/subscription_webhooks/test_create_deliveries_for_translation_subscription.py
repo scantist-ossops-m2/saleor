@@ -22,7 +22,7 @@ def test_translation_created_product(
 
     expected_payload = json.dumps({"translation": {"id": translation_id}})
 
-    assert deliveries[0].payload.payload == expected_payload
+    assert deliveries[0].payload.get_payload() == expected_payload
     assert len(deliveries) == len(webhooks)
     assert deliveries[0].webhook == webhooks[0]
 
@@ -41,7 +41,7 @@ def test_translation_created_product_variant(
 
     expected_payload = json.dumps({"translation": {"id": translation_id}})
 
-    assert deliveries[0].payload.payload == expected_payload
+    assert deliveries[0].payload.get_payload() == expected_payload
     assert len(deliveries) == len(webhooks)
     assert deliveries[0].webhook == webhooks[0]
 
@@ -60,7 +60,7 @@ def test_translation_created_collection(
 
     expected_payload = json.dumps({"translation": {"id": translation_id}})
 
-    assert deliveries[0].payload.payload == expected_payload
+    assert deliveries[0].payload.get_payload() == expected_payload
     assert len(deliveries) == len(webhooks)
     assert deliveries[0].webhook == webhooks[0]
 
@@ -79,7 +79,7 @@ def test_translation_created_category(
 
     expected_payload = json.dumps({"translation": {"id": translation_id}})
 
-    assert deliveries[0].payload.payload == expected_payload
+    assert deliveries[0].payload.get_payload() == expected_payload
     assert len(deliveries) == len(webhooks)
     assert deliveries[0].webhook == webhooks[0]
 
@@ -98,7 +98,7 @@ def test_translation_created_attribute(
 
     expected_payload = json.dumps({"translation": {"id": translation_id}})
 
-    assert deliveries[0].payload.payload == expected_payload
+    assert deliveries[0].payload.get_payload() == expected_payload
     assert len(deliveries) == len(webhooks)
     assert deliveries[0].webhook == webhooks[0]
 
@@ -117,7 +117,7 @@ def test_translation_created_attribute_value(
 
     expected_payload = json.dumps({"translation": {"id": translation_id}})
 
-    assert deliveries[0].payload.payload == expected_payload
+    assert deliveries[0].payload.get_payload() == expected_payload
     assert len(deliveries) == len(webhooks)
     assert deliveries[0].webhook == webhooks[0]
 
@@ -136,7 +136,7 @@ def test_translation_created_page(
 
     expected_payload = json.dumps({"translation": {"id": translation_id}})
 
-    assert deliveries[0].payload.payload == expected_payload
+    assert deliveries[0].payload.get_payload() == expected_payload
     assert len(deliveries) == len(webhooks)
     assert deliveries[0].webhook == webhooks[0]
 
@@ -155,7 +155,7 @@ def test_translation_created_shipping_method(
 
     expected_payload = json.dumps({"translation": {"id": translation_id}})
 
-    assert deliveries[0].payload.payload == expected_payload
+    assert deliveries[0].payload.get_payload() == expected_payload
     assert len(deliveries) == len(webhooks)
     assert deliveries[0].webhook == webhooks[0]
 
@@ -181,7 +181,7 @@ def test_translation_created_promotion(
         }
     )
 
-    assert deliveries[0].payload.payload == expected_payload
+    assert deliveries[0].payload.get_payload() == expected_payload
     assert len(deliveries) == len(webhooks)
     assert deliveries[0].webhook == webhooks[0]
 
@@ -205,7 +205,7 @@ def test_translation_created_promotion_converted_from_sale(
         }
     )
 
-    assert deliveries[0].payload.payload == expected_payload
+    assert deliveries[0].payload.get_payload() == expected_payload
     assert len(deliveries) == len(webhooks)
     assert deliveries[0].webhook == webhooks[0]
 
@@ -224,7 +224,7 @@ def test_translation_created_promotion_rule(
 
     expected_payload = json.dumps({"translation": {"id": translation_id}})
 
-    assert deliveries[0].payload.payload == expected_payload
+    assert deliveries[0].payload.get_payload() == expected_payload
     assert len(deliveries) == len(webhooks)
     assert deliveries[0].webhook == webhooks[0]
 
@@ -243,7 +243,7 @@ def test_translation_created_voucher(
 
     expected_payload = json.dumps({"translation": {"id": translation_id}})
 
-    assert deliveries[0].payload.payload == expected_payload
+    assert deliveries[0].payload.get_payload() == expected_payload
     assert len(deliveries) == len(webhooks)
     assert deliveries[0].webhook == webhooks[0]
 
@@ -262,7 +262,7 @@ def test_translation_created_menu_item(
 
     expected_payload = json.dumps({"translation": {"id": translation_id}})
 
-    assert deliveries[0].payload.payload == expected_payload
+    assert deliveries[0].payload.get_payload() == expected_payload
     assert len(deliveries) == len(webhooks)
     assert deliveries[0].webhook == webhooks[0]
 
@@ -281,7 +281,7 @@ def test_translation_updated_product(
 
     expected_payload = json.dumps({"translation": {"id": translation_id}})
 
-    assert deliveries[0].payload.payload == expected_payload
+    assert deliveries[0].payload.get_payload() == expected_payload
     assert len(deliveries) == len(webhooks)
     assert deliveries[0].webhook == webhooks[0]
 
@@ -300,7 +300,7 @@ def test_translation_updated_product_variant(
 
     expected_payload = json.dumps({"translation": {"id": translation_id}})
 
-    assert deliveries[0].payload.payload == expected_payload
+    assert deliveries[0].payload.get_payload() == expected_payload
     assert len(deliveries) == len(webhooks)
     assert deliveries[0].webhook == webhooks[0]
 
@@ -319,7 +319,7 @@ def test_translation_updated_collection(
 
     expected_payload = json.dumps({"translation": {"id": translation_id}})
 
-    assert deliveries[0].payload.payload == expected_payload
+    assert deliveries[0].payload.get_payload() == expected_payload
     assert len(deliveries) == len(webhooks)
     assert deliveries[0].webhook == webhooks[0]
 
@@ -338,7 +338,7 @@ def test_translation_updated_category(
 
     expected_payload = json.dumps({"translation": {"id": translation_id}})
 
-    assert deliveries[0].payload.payload == expected_payload
+    assert deliveries[0].payload.get_payload() == expected_payload
     assert len(deliveries) == len(webhooks)
     assert deliveries[0].webhook == webhooks[0]
 
@@ -357,7 +357,7 @@ def test_translation_updated_attribute(
 
     expected_payload = json.dumps({"translation": {"id": translation_id}})
 
-    assert deliveries[0].payload.payload == expected_payload
+    assert deliveries[0].payload.get_payload() == expected_payload
     assert len(deliveries) == len(webhooks)
     assert deliveries[0].webhook == webhooks[0]
 
@@ -376,7 +376,7 @@ def test_translation_updated_attribute_value(
 
     expected_payload = json.dumps({"translation": {"id": translation_id}})
 
-    assert deliveries[0].payload.payload == expected_payload
+    assert deliveries[0].payload.get_payload() == expected_payload
     assert len(deliveries) == len(webhooks)
     assert deliveries[0].webhook == webhooks[0]
 
@@ -395,7 +395,7 @@ def test_translation_updated_page(
 
     expected_payload = json.dumps({"translation": {"id": translation_id}})
 
-    assert deliveries[0].payload.payload == expected_payload
+    assert deliveries[0].payload.get_payload() == expected_payload
     assert len(deliveries) == len(webhooks)
     assert deliveries[0].webhook == webhooks[0]
 
@@ -414,7 +414,7 @@ def test_translation_updated_shipping_method(
 
     expected_payload = json.dumps({"translation": {"id": translation_id}})
 
-    assert deliveries[0].payload.payload == expected_payload
+    assert deliveries[0].payload.get_payload() == expected_payload
     assert len(deliveries) == len(webhooks)
     assert deliveries[0].webhook == webhooks[0]
 
@@ -435,7 +435,7 @@ def test_translation_updated_promotion(
         {"translation": {"id": translation_id, "__typename": "PromotionTranslation"}}
     )
 
-    assert deliveries[0].payload.payload == expected_payload
+    assert deliveries[0].payload.get_payload() == expected_payload
     assert len(deliveries) == len(webhooks)
     assert deliveries[0].webhook == webhooks[0]
 
@@ -454,7 +454,7 @@ def test_translation_updated_promotion_rule(
 
     expected_payload = json.dumps({"translation": {"id": translation_id}})
 
-    assert deliveries[0].payload.payload == expected_payload
+    assert deliveries[0].payload.get_payload() == expected_payload
     assert len(deliveries) == len(webhooks)
     assert deliveries[0].webhook == webhooks[0]
 
@@ -473,7 +473,7 @@ def test_translation_updated_voucher(
 
     expected_payload = json.dumps({"translation": {"id": translation_id}})
 
-    assert deliveries[0].payload.payload == expected_payload
+    assert deliveries[0].payload.get_payload() == expected_payload
     assert len(deliveries) == len(webhooks)
     assert deliveries[0].webhook == webhooks[0]
 
@@ -492,6 +492,6 @@ def test_translation_updated_menu_item(
 
     expected_payload = json.dumps({"translation": {"id": translation_id}})
 
-    assert deliveries[0].payload.payload == expected_payload
+    assert deliveries[0].payload.get_payload() == expected_payload
     assert len(deliveries) == len(webhooks)
     assert deliveries[0].webhook == webhooks[0]
